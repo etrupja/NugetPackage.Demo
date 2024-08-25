@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NugetPackage.Demo.Models;
+using NugetPackage.Library;
 using System.Diagnostics;
 
 namespace NugetPackage.Demo.Controllers
@@ -15,6 +16,9 @@ namespace NugetPackage.Demo.Controllers
 
         public IActionResult Index()
         {
+            var sum = new MathHelper();
+            var result = sum.Add(10, 20);
+
             return View();
         }
 
