@@ -6,9 +6,20 @@
     <Nullable>enable</Nullable>
     <Title>A MathHelper package</Title>
 	<Authors>Ervis Trupja</Authors>
-	<Version>2.2.3</Version>
+	<Version>2.2.4</Version>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Description>This is a useful nuget package for demo purposes.</Description>
+	<PackageProjectUrl>http://dotnethow.net</PackageProjectUrl>
+	<PackageIcon>math-icon.png</PackageIcon>
+	<PackageTags>math,linkedinlearning,education</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\math-icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
