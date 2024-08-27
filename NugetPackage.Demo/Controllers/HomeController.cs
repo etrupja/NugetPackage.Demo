@@ -17,7 +17,7 @@ namespace NugetPackage.Demo.Controllers
         public IActionResult Index()
         {
             var sum = new MathHelper();
-            var result = sum.AddV2(10, 20);
+            var result = sum.Factorial(10);
 
             return View();
         }
