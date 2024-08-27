@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NugetPackage.Demo.Models;
-using NugetPackage.Library;
 using System.Diagnostics;
+using MathNet.Numerics.Random;
+using Newtonsoft.Json;
 
 namespace NugetPackage.Demo.Controllers
 {
@@ -16,8 +17,8 @@ namespace NugetPackage.Demo.Controllers
 
         public IActionResult Index()
         {
-            var sum = new MathHelper();
-            var result = sum.Factorial(10);
+            var randomNumbers = SystemRandomSource.Doubles(4, 10);
+            var jsonResponse = JsonConvert.SerializeObject(randomNumbers);
 
             return View();
         }
